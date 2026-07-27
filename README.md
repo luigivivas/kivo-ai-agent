@@ -139,20 +139,19 @@ La aplicación corre en un contenedor Docker sobre una VPS propia, aislada del r
 que corren en esa máquina (contenedor, puerto y volumen dedicados, sin dependencias compartidas).
 
 - **URL pública:** http://31.97.132.21:8600
-- **Captura:** ver `screenshots/`
 
 ## Estructura del proyecto
 
 ```
 kivo-ai-agent/
-├── app.py                  # interfaz Streamlit
-├── ingest.py                # construye el índice vectorial
+├── app.py                # interfaz Streamlit
+├── ingest.py             # construye el índice vectorial
 ├── src/
-│   ├── loaders.py           # lectura y troceado de PDF/CSV
-│   ├── gemini_client.py     # embeddings + generación (SDK de Gemini)
-│   ├── store.py              # índice vectorial (NumPy) + búsqueda por similitud
-│   └── agent.py               # arma el contexto y orquesta la respuesta
-├── data/                    # documentos fuente (PDF/CSV)
+│   ├── loaders.py        # lectura y troceado de PDF/CSV
+│   ├── gemini_client.py  # embeddings + generación (SDK de Gemini)
+│   ├── store.py          # índice vectorial (NumPy) + búsqueda por similitud
+│   └── agent.py          # arma el contexto y orquesta la respuesta
+├── data/                 # documentos fuente (PDF/CSV)
 ├── Dockerfile
 ├── docker-compose.yml
 └── requirements.txt
