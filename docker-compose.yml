@@ -1,0 +1,9 @@
+services:
+  kivo-agent:
+    build: .
+    container_name: kivo-agent
+    env_file:
+      - .env
+    ports:
+      - "8600:8501"
+    restart: unless-stopped
