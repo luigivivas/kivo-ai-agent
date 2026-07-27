@@ -7,8 +7,6 @@ from google import genai
 EMBED_MODEL = os.environ.get("GEMINI_EMBED_MODEL", "gemini-embedding-2")
 CHAT_MODEL = os.environ.get("GEMINI_CHAT_MODEL", "gemini-3.6-flash")
 
-_EMBED_BATCH = 32
-
 
 def get_client() -> genai.Client:
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -20,25 +18,25 @@ def get_client() -> genai.Client:
     return genai.Client(api_key=api_key)
 
 
-def _embed_batch(client: genai.Client, texts: list[str]) -> list[list[float]]:
-    result = client.models.embed_content(model=EMBED_MODEL, contents=texts)
-    return [e.values for e in result.embeddings]
+def _embed_one(client: genai.Client, text: str) -> list[float]:
+    # embed_content con una lista de varios textos no devuelve un embedding por texto
+    # (se probó en la práctica y solo entrega uno por llamada), así que se embebe de a uno.
+    result = client.models.embed_content(model=EMBED_MODEL, contents=text)
+    return result.embeddings[0].values
 
 
 def embed_documents(client: genai.Client, chunks: list[str], titles: list[str]) -> np.ndarray:
     """Embebe texto de documentos usando el formato asimétrico recomendado para gemini-embedding-2."""
-    prefixed = [f"title: {title} | text: {chunk}" for chunk, title in zip(chunks, titles)]
-    vectors: list[list[float]] = []
-    for i in range(0, len(prefixed), _EMBED_BATCH):
-        batch = prefixed[i : i + _EMBED_BATCH]
-        vectors.extend(_embed_batch(client, batch))
+    vectors = [
+        _embed_one(client, f"title: {title} | text: {chunk}")
+        for chunk, title in zip(chunks, titles)
+    ]
     return np.array(vectors, dtype="float32")
 
 
 def embed_query(client: genai.Client, question: str) -> np.ndarray:
-    prefixed = f"task: search result | query: {question}"
-    vectors = _embed_batch(client, [prefixed])
-    return np.array(vectors[0], dtype="float32")
+    vector = _embed_one(client, f"task: search result | query: {question}")
+    return np.array(vector, dtype="float32")
 
 
 def ask(
