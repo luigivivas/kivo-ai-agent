@@ -6,4 +6,9 @@ services:
       - .env
     ports:
       - "8600:8501"
+    volumes:
+      - kivo-index:/app/index
     restart: unless-stopped
+
+volumes:
+  kivo-index:
