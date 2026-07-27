@@ -2,15 +2,15 @@ sku,nombre,categoria,precio_usd,stock,garantia_meses,envio_gratis,descripcion
 KV-AUD-001,Audífonos Kivo Pulse ANC,Audio,79.90,142,12,si,Audífonos inalámbricos con cancelación activa de ruido y 30 horas de batería.
 KV-AUD-002,Audífonos Kivo Buds Mini,Audio,34.90,310,12,si,Audífonos in-ear compactos resistentes al agua IPX4 con estuche de carga.
 KV-PAR-010,Parlante Kivo Boom 20W,Audio,49.90,88,12,si,Parlante Bluetooth portátil resistente a salpicaduras con 14 horas de autonomía.
-KV-SMW-100,Smartwatch Kivo Fit 2,Wearables,89.90,65,12,si,Reloj inteligente con monitor de ritmo cardíaco, GPS y batería de 7 días.
+KV-SMW-100,Smartwatch Kivo Fit 2,Wearables,89.90,65,12,si,"Reloj inteligente con monitor de ritmo cardíaco, GPS y batería de 7 días."
 KV-SMW-101,Smartwatch Kivo Fit Kids,Wearables,54.90,40,6,no,Reloj inteligente para niños con localizador y llamadas a contactos autorizados.
-KV-CAR-020,Cargador Kivo Fast 65W,Cargadores,24.90,220,6,si,Cargador GaN de carga rápida con 2 puertos USB-C, compatible con laptops.
+KV-CAR-020,Cargador Kivo Fast 65W,Cargadores,24.90,220,6,si,"Cargador GaN de carga rápida con 2 puertos USB-C, compatible con laptops."
 KV-CAR-021,Power Bank Kivo 20000mAh,Cargadores,32.90,175,12,si,Batería externa de alta capacidad con carga rápida bidireccional 22.5W.
 KV-CAB-030,Cable Kivo USB-C a USB-C 1.5m,Cargadores,9.90,500,6,no,Cable trenzado de nylon con soporte de carga rápida hasta 100W.
 KV-KEY-040,Teclado Kivo Mech Compact,Periféricos,64.90,54,12,si,Teclado mecánico 75% con switches intercambiables y retroiluminación RGB.
 KV-MOU-041,Mouse Kivo Air Wireless,Periféricos,29.90,190,12,si,Mouse inalámbrico ultraliviano de 58g con sensor óptico de 16000 DPI.
 KV-WEB-050,Webcam Kivo Clear 1080p,Periféricos,39.90,76,12,si,Webcam Full HD con micrófono dual y corrección automática de luz.
-KV-HUB-060,Hub Kivo USB-C 7 en 1,Accesorios,44.90,98,6,si,Hub con HDMI 4K, lector de tarjetas, 3 puertos USB-A y carga PD 100W.
-KV-FUN-070,Funda Kivo Guard para laptop 14",Accesorios,19.90,260,3,no,Funda acolchada resistente al agua con bolsillo para cargador.
-KV-SOP-080,Soporte Kivo Desk para laptop,Accesorios,27.90,130,6,no,Soporte ergonómico ajustable en aluminio, plegable para transporte.
+KV-HUB-060,Hub Kivo USB-C 7 en 1,Accesorios,44.90,98,6,si,"Hub con HDMI 4K, lector de tarjetas, 3 puertos USB-A y carga PD 100W."
+KV-FUN-070,Funda Kivo Guard para laptop de 14 pulgadas,Accesorios,19.90,260,3,no,Funda acolchada resistente al agua con bolsillo para cargador.
+KV-SOP-080,Soporte Kivo Desk para laptop,Accesorios,27.90,130,6,no,"Soporte ergonómico ajustable en aluminio, plegable para transporte."
 KV-LAM-090,Lámpara Kivo Focus LED,Hogar,22.90,155,6,no,Lámpara de escritorio LED con 5 niveles de brillo y puerto USB.
