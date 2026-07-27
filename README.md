@@ -106,15 +106,39 @@ todavía no existe.
 
 ## Ejemplos de respuestas
 
-_(se completa con capturas/transcripciones reales de la app una vez desplegada — ver sección de
-despliegue más abajo)_
+Transcripciones reales generadas por el agente ya desplegado (no son texto de ejemplo escrito a
+mano):
+
+> **¿Cuánto cuesta el smartwatch Kivo Fit 2 y qué garantía tiene?**
+> El Smartwatch Kivo Fit 2 tiene un precio de $89.90 USD y cuenta con una garantía de 12 meses
+> por defectos de fábrica. Además, este modelo incluye envío gratis e integra GPS, monitor de
+> ritmo cardíaco y una batería con duración de hasta 7 días.
+
+> **Compré unos audífonos y no me gustaron, ¿los puedo devolver?**
+> Puedes devolverlos dentro de los 30 días calendario posteriores a la entrega, siempre que el
+> producto esté en su empaque original y con todos sus accesorios. Ten en cuenta que, por motivos
+> de higiene, los audífonos de tipo *in-ear* ya usados solo se aceptan para devolución si
+> presentan una falla de fábrica comprobable. Como la devolución es por cambio de opinión, el
+> costo del envío de retorno corre por tu cuenta, y puedes solicitar el trámite desde la sección
+> "Mis pedidos" o escribiendo a soporte@kivo-tienda.com.
+
+> **¿A qué países hacen envíos y cuánto tardan?**
+> Realizamos envíos a Colombia, México, Perú y Chile. El tiempo de entrega oscila entre 2 y 10
+> días hábiles según la ubicación: toma de 2 a 4 días hábiles para ciudades principales, de 4 a 6
+> días hábiles para ciudades intermedias, y de 6 a 10 días hábiles para zonas rurales o de difícil
+> acceso.
+
+> **¿Cuál es la capital de Francia?** _(pregunta fuera de contexto, a propósito)_
+> No tengo esa información en mis documentos. Si tienes alguna consulta relacionada con nuestros
+> productos, compras o políticas en Kivo, con gusto te ayudo, o puedes escribirnos directamente a
+> soporte@kivo-tienda.com.
 
 ## Despliegue
 
 La aplicación corre en un contenedor Docker sobre una VPS propia, aislada del resto de servicios
-que corren en esa máquina (contenedor y puerto dedicados, sin dependencias compartidas).
+que corren en esa máquina (contenedor, puerto y volumen dedicados, sin dependencias compartidas).
 
-- **URL pública:** _pendiente_
+- **URL pública:** http://31.97.132.21:8600
 - **Captura:** ver `screenshots/`
 
 ## Estructura del proyecto
